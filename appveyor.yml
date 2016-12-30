@@ -1,0 +1,30 @@
+# version format
+version: 1.0.{build}
+
+branches:
+  except:
+    - gh-pages
+
+image: Visual Studio 2015
+
+init:
+  - git config --global core.autocrlf input
+
+cache:
+  - packages -> **\packages.config
+
+install:
+  - choco install docfx
+
+platform: Any CPU
+configuration: Release
+
+build:
+  project: src\SampleClass1\SampleClass1.sln
+
+after_build:
+  - docfx metadata
+  - docfx build
+
+test: off
+
