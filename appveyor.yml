@@ -16,13 +16,7 @@ cache:
 install:
   - choco install docfx
 
-platform: Any CPU
-configuration: Release
-
-build:
-  project: src\SampleClass1\SampleClass1.sln
-
-after_build:
+build_script:
   - docfx metadata
   - docfx build
 
