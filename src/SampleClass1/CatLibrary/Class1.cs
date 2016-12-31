@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -130,10 +130,10 @@ namespace CatLibrary
         /// <summary>
         /// It's a complex constructor. The parameter will have some attributes.
         /// </summary>
-        /// <param name="nickName">it's string type.</param>
-        /// <param name="age">It's an out and ref parameter.</param>
+        /// <param name="nickName">A <see cref="string"/>.</param>
+        /// <param name="age">An <see cref="int"/> that is an out and ref parameter.</param>
         /// <param name="realName">It's an out paramter.</param>
-        /// <param name="isHealthy">It's an in parameter.</param>
+        /// <param name="isHealthy">A <see cref="bool"/> that is an in parameter.</param>
         public Cat(string nickName, out int age, [Out] string realName, [In] bool isHealthy) { age = 1; }
 
         //Methods: template + normal with generic type + pointer method
