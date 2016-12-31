@@ -1,4 +1,4 @@
-﻿{
+{
   "metadata": [
     {
       "src": [
@@ -32,6 +32,9 @@
       "_appTitle": "docfx seed website",
       "_enableSearch": true
     },
+    "xref": [
+      "src/SampleClass1/CatLibrary/msdn.4.5.2.zip"
+    ],
     "dest": "_site"
   }
 }
