@@ -14,11 +14,10 @@ cache:
   - packages -> **\packages.config
 
 install:
-  - choco install docfx
+  - choco install docfx -y --notsilent=true
 
 build_script:
   - docfx metadata -f
   - docfx build -f
 
 test: off
-
