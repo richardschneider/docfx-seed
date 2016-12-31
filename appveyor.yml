@@ -17,8 +17,8 @@ install:
   - choco install docfx
 
 build_script:
-  - docfx metadata
-  - docfx build
+  - docfx metadata -f
+  - docfx build -f
 
 test: off
 
