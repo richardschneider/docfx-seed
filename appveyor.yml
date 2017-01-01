@@ -9,7 +9,6 @@ image: Visual Studio 2015
 
 init:
   - git config --global core.autocrlf input
-  - set
 
 cache:
   - packages -> **\packages.config
@@ -18,7 +17,7 @@ install:
   - choco install docfx -y --notsilent=true
 
 build_script:
-  - docfx metadata -f
-  - docfx build -f
+  - .\tools\docfx\docfx metadata -f
+  - .\tools\docfx\docfx build -f
 
 test: off
